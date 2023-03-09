@@ -1,0 +1,239 @@
+.app__directory {
+    width: 93%;
+    height: 100%;
+    background-color: white;
+    margin-left: 75px;
+    box-shadow: 0 10px 15px lightblue;
+    padding: 30px 30px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.app__directory__header {
+    width: 100%;
+    height: 40px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.app__directory__data {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 4px;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+    margin-bottom: 20px;
+
+    .app__directory__data__header {
+        width: 99.5%;
+        height: 35px;
+
+        position: absolute;
+        top: 5px;
+
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        column-gap: 5px;
+
+        .app__directory__data__header__labels {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            span {
+                font-size: 18px;
+            }
+
+            .line {
+                position: absolute;
+                width: 5px;
+                height: 24px;
+                background-color: white;
+                bottom: -24px;
+            }
+        }
+    }
+
+    .m0 {
+        margin: 0;
+    }
+    .data {
+        z-index: 1;
+    }
+
+    .app__directory__data__body {
+        width: 100%;
+        height: 100%;
+        margin-top: 60px;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        .app__directory__rows {
+            width: 100%;
+            height: 35px;
+
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            column-gap: 5px;
+
+            margin-bottom: 15px;
+
+            /* Tooltip container */
+            .tooltip {
+                position: relative;
+                width: 100%;
+                height: 35px;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 0 10px;
+                font-size: 15px;
+                cursor: pointer;
+
+                .watermark {
+                    width: 20%;
+                    height: 90%;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+
+                .ig {
+                    background: linear-gradient(135deg, #e95950 0%, lightpink 50%, transparent 50%, transparent);
+                }
+
+                .fb {
+                    background: linear-gradient(135deg, blue 0%, lightblue 50%, transparent 50%, transparent);
+                }
+
+                .wp {
+                    background: linear-gradient(135deg, green 0%, #dcf8c6 50%, transparent 50%, transparent);
+                }
+
+                .nm {
+                    background: linear-gradient(135deg, black 0%, white 50%, transparent 50%, transparent);
+                }
+            }
+
+            /* Tooltip text */
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 200px;
+                height: 100px;
+                background-color: #555;
+                color: #fff;
+                text-align: left;
+                padding: 5px 10px;
+                border-radius: 6px;
+
+                /* Position the tooltip text */
+                position: absolute;
+                z-index: 2;
+                bottom: -300%;
+                left: 40%;
+                margin-left: -60px;
+
+                /* Fade in tooltip */
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            /* Tooltip arrow */
+            .tooltip .tooltiptext::after {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                left: 10%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #555 transparent transparent transparent;
+                transform: rotate(180deg);
+            }
+
+            /* Show the tooltip text when you mouse over the tooltip container */
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.br-5 {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.bl-5 {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 22px;
+        cursor: pointer;
+    }
+}
+
+.info__div {
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    bottom: 30%;
+    top: 30%;
+    padding: 0 50px;
+
+    span {
+        text-align: center;
+    }
+}
+
+.icon {
+    width: 22px;
+    margin-right: 5px;
+}
+
+#icon_data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}

@@ -1,0 +1,128 @@
+.modal-content {
+  width: 50%;
+  background: none;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding-bottom: 20px;
+}
+
+.modal-content .header {
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: cadetblue;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.modal-content span {
+  font-size: 25px;
+  font-weight: bold;
+  z-index: 3;
+}
+
+.modal-content .inputFields {
+  width: 90%;
+  border-radius: 5px;
+  padding: 8px;
+  outline: none;
+  border: none;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0 0 10px gray;
+          box-shadow: 0 0 10px gray;
+}
+
+.modal-content button {
+  width: 90%;
+  border-radius: 5px;
+  padding: 7px 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-box-shadow: 0 0 10px gray;
+          box-shadow: 0 0 10px gray;
+  background-color: aquamarine;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  font-weight: bold;
+}
+
+.modal-content button:hover {
+  background-color: lemonchiffon;
+}
+
+.warning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 90%;
+  padding: 10px 10px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: aliceblue;
+}
+
+.radio_boxes {
+  margin-bottom: 15px;
+  width: 90%;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px solid gray;
+          box-shadow: 0 0 10px solid gray;
+}
+
+.radio_boxes label {
+  width: 30%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.radio_boxes label input {
+  margin-right: 5px;
+}
+
+#gswarning {
+  display: none;
+}
+
+#gsname {
+  display: none;
+}
+/*# sourceMappingURL=createchatmodal.css.map */

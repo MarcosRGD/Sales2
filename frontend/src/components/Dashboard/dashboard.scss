@@ -1,0 +1,222 @@
+.app__dashboard {
+    width: 93%;
+    height: 100%;
+    background-color: white;
+    margin-left: 75px;
+    box-shadow: 0 10px 15px lightblue;
+    padding: 30px 30px;
+    overflow: hidden;
+    // overflow-y: scroll;
+}
+
+.app__dashboard__body__chart {
+    width: 100%;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    position: relative;
+
+    .more__info {
+        font-size: 12px;
+        color: lightgreen;
+        position: absolute;
+        right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 5px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.app__dashboard__header {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.welcome__text__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    .userName {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .welcome {
+        font-size: .875rem;
+        background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+    }
+}
+
+.date {
+    font-size: .875rem;
+    font-weight: bold;
+    color: lightgray;
+    letter-spacing: 1px;
+}
+
+.app__dashboard__body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.app__dashboard__body__flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    .sales__info__wrapper {
+        width: 49%;
+        background-color: aliceblue;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3px;
+        margin-right: 2px;
+
+        .sales__header {
+            color: lightgray;
+        }
+
+        .sales__count {
+            font-size: 25px;
+        }
+    }
+}
+
+.app__dashboard__containers {
+    width: 63%;
+    background-color: aliceblue;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px 20px;
+    height: 350px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.small__flex {
+    width: 35%;
+}
+
+.app__dashboard__body__flex__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    font-size: 18px;
+    letter-spacing: .3px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid white;
+    position: relative;
+
+    .mr-10 {
+        margin-right: 10px;
+    }
+}
+
+.integration__wrapper {
+    width: 100%;
+    gap: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .integration {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 14px;
+        color: gray;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            color: lightblue;
+        }
+    }
+}
+
+.small {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.linked__icon {
+    position: absolute;
+    right: 0;
+    width: 17px;
+    cursor: pointer;
+}
+
+.w-20 {
+    width: 20px;
+}
+
+.rotate {
+    animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.role {
+    position: absolute;
+    right: 0;
+    border: 1px solid lightgreen;
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    font-size: 12px;
+    width: 60px;
+}
+
+.mr-0 {
+    margin-right: 0;
+}
+
+.ml-0 {
+    margin-left: 0;
+}

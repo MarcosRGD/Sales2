@@ -1,0 +1,310 @@
+.app__funnels {
+    width: 93%;
+    height: 100%;
+    background-color: white;
+    margin-left: 75px;
+    box-shadow: 0 10px 15px lightblue;
+    padding: 30px 30px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.app__funnels__directory__none {
+    width: 100%;
+    height: 100%;
+}
+
+.app__funnels__search__wrapper {
+    width: 100%;
+    height: 40px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.list-choice {
+    height: 100%;
+    min-width: 180px;
+    position: relative;
+    cursor: pointer;
+    border-right: 2px solid white;
+}
+
+.list-choice input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+.list-choice-title {
+    width: 100%;
+    display: block;
+    text-align: left;
+    padding: 0.55em 1em;
+    box-sizing: border-box;
+    color: black;
+    text-shadow: 0 1px 0 #CACACA;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.list-choice:hover .list-choice-title {
+    border-radius: 0.2em 0.2em 0 0;
+}
+
+.list-choice-objects label:nth-last-of-type(1) span {
+    border-radius: 0 0 0.2em 0.2em;
+}
+
+.list-choice input[type="radio"]+span {
+    color: black;
+    background: aliceblue;
+    padding: 0.55em 1em;
+    z-index: 4;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.list-choice-objects {
+    position: absolute;
+    top: 0;
+    padding-top: 2.5em;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 250ms ease;
+}
+
+.list-choice:hover .list-choice-objects input[type="radio"]+span {
+    position: relative;
+    top: 0;
+    transition: all 250ms ease-in-out;
+}
+
+.list-choice:hover input[type="radio"]+span:hover {
+    background: #BBB;
+}
+
+.list-choice:hover input[type="radio"]:checked+span:hover {
+    background: #74D68E;
+}
+
+.list-choice input[type="radio"]:checked+span {
+    position: absolute;
+    top: 0em;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.list-choice:hover input[type="radio"]:checked+span {
+    border-radius: 0;
+}
+
+.list-choice:hover .list-choice-objects label:nth-last-of-type(1) input[type="radio"]:checked+span {
+    border-radius: 0 0 0.2em 0.2em;
+}
+
+.list-choice:hover .list-choice-objects {
+    max-height: 540px;
+}
+
+.search__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    width: 85%;
+    height: 100%;
+    border-right: 2px solid white;
+    margin-right: 10px;
+}
+
+#search__box {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    margin: 0 5px;
+    background: none;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+}
+
+.search__icon {
+    width: 20px;
+}
+
+.more__actions__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action__icon {
+    width: 27px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.search__button {
+    display: none;
+}
+
+.app__funnels__wrapper {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    position: relative;
+
+    .funnel {
+        min-width: 280px;
+        max-width: 280px;
+        height: 100%;
+        background-color: aliceblue;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        .funnel__header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 5px 10px;
+            position: relative;
+            border-bottom: 2px solid white;
+
+            span {
+                font-size: 20px;
+                background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+                background-size: 100%;
+                background-repeat: repeat;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .header__icon {
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.color {
+    width: 15px;
+    height: 15px;
+    background-color: #5ffbf1;
+    border-radius: 100%;
+    margin-left: 15px;
+    position: absolute;
+    right: 10px;
+}
+
+.add__stage {
+    width: 32px;
+    cursor: pointer;
+}
+
+.create__stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto 0;
+    padding: 20px;
+    cursor: pointer;
+
+    span {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+}
+
+.p-absolute {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.funnel__chat__wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    overflow-y: auto;
+    padding: 5px;
+
+    .chat {
+        width: 100%;
+        height: 55px;
+        position: relative;
+        border-radius: 5px;
+        background-color: white;
+        margin: 5px 0;
+        cursor: pointer;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .lead__details {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 10px;
+
+            .leadname {
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+            }
+
+            .lastmessage {
+                font-size: 11px;
+                color: lightgray;
+            }
+        }
+
+        .chat__icon {
+            width: 34px;
+            margin-right: 12px;
+        }
+
+        .label__icon {
+            position: absolute;
+            right: 10px;
+            width: 25px;
+        }
+    }
+
+    .chat.dragging {
+        opacity: .5;
+    }
+
+    .instruction {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: not-allowed;
+    }
+}

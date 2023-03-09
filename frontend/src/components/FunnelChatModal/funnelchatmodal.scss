@@ -1,0 +1,236 @@
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 6;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background: url("../../assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    width: 60%;
+    height: 90%;
+    padding: 2px;
+    position: relative;
+
+    .topbar {
+        width: 100%;
+        background-color: aliceblue;
+        display: flex;
+        align-items: center;
+        padding: 5px 15px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        justify-content: flex-start;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 2;
+
+        .profile {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .topbar__actions {
+            width: 74%;
+            margin-left: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            display: none;
+
+            .chat__funnel {
+                width: 100px;
+                padding: 5px 10px;
+                border-radius: 5px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                background-color: white;
+            }
+
+            .action__select {
+                padding: 6px 10px;
+                border: 0;
+                outline: 0;
+                border-radius: 5px;
+            }
+
+            .c-pointer {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .chatbox {
+        width: 100%;
+        height: 100%;
+        padding: 60px 15px;
+        position: relative;
+        overflow-y: auto;
+        background: url("../../assets/background.png");
+
+
+        .message {
+            width: 100%;
+            margin: 4px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                position: relative;
+                background-color: #dcf8c6;
+                color: black;
+                padding: 5px 12px;
+                border-radius: 5px;
+                min-width: 150px;
+                max-width: 65%;
+                overflow-wrap: break-word;
+                white-space: pre-wrap;
+            }
+        }
+
+        .seller p::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -8px;
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent);
+        }
+
+        .client p::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -8px;
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(225deg, #fff 0%, #fff 50%, transparent 50%, transparent);
+        }
+
+        .client {
+            align-items: center;
+            justify-content: flex-start;
+
+            p {
+                background-color: #fff;
+            }
+        }
+
+        .seller {
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+
+    .messagebox {
+        width: 100%;
+        height: 50px;
+        background-color: aliceblue;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 10px 15px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            width: 25px;
+            cursor: pointer;
+        }
+
+        .send__message__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 88%;
+            height: 80%;
+
+            button {
+                display: none;
+            }
+
+            input {
+                width: 100%;
+                border: 0;
+                outline: 0;
+                height: 35px;
+                padding: 0 15px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    z-index: 3;
+    font-weight: bold;
+
+    span {
+        font-size: 5px;
+    }
+}
+
+.trash {
+    width: 15px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.lead__details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    .number {
+        font-size: 12px;
+        color: lightgray;
+    }
+
+    .name {
+        font-size: 17px;
+        font-weight: 700;
+        color: black;
+    }
+}

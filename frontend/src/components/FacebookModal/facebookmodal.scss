@@ -1,0 +1,15 @@
+.instruction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    padding: 10px 20px;
+    width: 500px;
+    text-align: center;
+    border-radius: 5px;
+
+    img {
+        width: 50px;
+    }
+}

@@ -1,0 +1,281 @@
+.app__salesbot {
+    width: 93%;
+    height: 100%;
+    background-color: white;
+    margin-left: 75px;
+    box-shadow: 0 10px 15px lightblue;
+    padding: 30px 30px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    .top__sales__container {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background-color: aliceblue;
+        padding: 5px 15px;
+        border-radius: 5px;
+
+        .content {
+            font-size: 20px;
+        }
+
+        /* The switch - the box around the slider */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 25px;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(25px);
+            -ms-transform: translateX(25px);
+            transform: translateX(25px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 50px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    }
+}
+
+
+.template__container {
+    width: 100%;
+    height: 450px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    .template__chat {
+        width: 100%;
+        height: 390px;
+        background-color: aliceblue;
+        border-radius: 5px;
+        overflow: scroll;
+    }
+
+    .template__controllers {
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+        background-color: aliceblue;
+        border-radius: 5px;
+        position: relative;
+        padding: 0 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            width: 25px;
+            cursor: pointer;
+        }
+
+        .send__message__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 94%;
+            height: 80%;
+
+            button {
+                display: none;
+            }
+
+            input {
+                width: 100%;
+                border: 0;
+                outline: 0;
+                height: 35px;
+                padding: 0 15px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.chatbox {
+    width: 100%;
+    height: calc(100% - 50px);
+    padding: 10px 15px;
+    padding-bottom: 60px;
+    position: relative;
+    overflow-y: auto;
+    background-color: aliceblue;
+    border-radius: 5px;
+
+    .message {
+        width: 100%;
+        margin: 4px 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+
+        .delIcon {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+
+        .text {
+            position: relative;
+            color: black;
+            padding: 5px 10px;
+            padding-bottom: 18px;
+            border-radius: 05px;
+            min-width: 350px;
+            max-width: 65%;
+            background-color: #dcf8c6;
+        }
+
+        p {
+            position: relative;
+            background-color: #dcf8c6;
+            color: black;
+            padding: 5px 12px;
+            padding-bottom: 18px;
+            border-radius: 5px;
+            min-width: 200px;
+            max-width: 65%;
+            overflow-wrap: break-word;
+            white-space: pre-wrap;
+        }
+
+        .timestamps {
+            position: absolute;
+            background: none;
+            display: flex;
+            align-items: center;
+            bottom: 0;
+            font-size: 11px;
+            width: 200px;
+            color: gray;
+            font-weight: bold;
+            padding: 2px 5px;
+
+            .day {
+                background: none;
+            }
+
+            .date {
+                background: none;
+                font-size: 11px;
+                color: gray;
+            }
+        }
+    }
+
+    .seller p::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -8px;
+        width: 10px;
+        height: 10px;
+        background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent);
+    }
+
+    .client p::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -8px;
+        width: 10px;
+        height: 10px;
+        background: linear-gradient(225deg, #fff 0%, #fff 50%, transparent 50%, transparent);
+    }
+
+    .seller img::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -8px;
+        width: 10px;
+        height: 10px;
+        background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent);
+    }
+
+    .client img::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -8px;
+        width: 10px;
+        height: 10px;
+        background: linear-gradient(225deg, #fff 0%, #fff 50%, transparent 50%, transparent);
+    }
+
+    .client {
+        align-items: center;
+        justify-content: flex-start;
+
+        p {
+            background-color: #fff;
+        }
+
+        img {
+            background-color: #fff;
+        }
+    }
+
+    .seller {
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+.emoji__picker_ {
+    position: absolute;
+    bottom: 70px;
+    left: 0px;
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACT,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,cAAc,EAAE,MAAM;CAKzB;;AATD,AAMI,YANQ,CAMR,IAAI,CAAC;EACD,aAAa,EAAE,IAAI;CACtB",
+    "sources": [
+        "facebookmodal.scss"
+    ],
+    "names": [],
+    "file": "facebookmodal.css"
+}

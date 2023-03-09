@@ -1,0 +1,315 @@
+.app__salesbot {
+  width: 93%;
+  height: 100%;
+  background-color: white;
+  margin-left: 75px;
+  -webkit-box-shadow: 0 10px 15px lightblue;
+          box-shadow: 0 10px 15px lightblue;
+  padding: 30px 30px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.app__salesbot .top__sales__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  background-color: aliceblue;
+  padding: 5px 15px;
+  border-radius: 5px;
+  /* The switch - the box around the slider */
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Rounded sliders */
+}
+
+.app__salesbot .top__sales__container .content {
+  font-size: 20px;
+}
+
+.app__salesbot .top__sales__container .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+
+.app__salesbot .top__sales__container .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.app__salesbot .top__sales__container .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.app__salesbot .top__sales__container .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.app__salesbot .top__sales__container input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.app__salesbot .top__sales__container input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+.app__salesbot .top__sales__container input:checked + .slider:before {
+  -webkit-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+.app__salesbot .top__sales__container .slider.round {
+  border-radius: 50px;
+}
+
+.app__salesbot .top__sales__container .slider.round:before {
+  border-radius: 50%;
+}
+
+.template__container {
+  width: 100%;
+  height: 450px;
+  margin-top: 20px;
+}
+
+.template__container .template__chat {
+  width: 100%;
+  height: 390px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+.template__container .template__controllers {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  position: relative;
+  padding: 0 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.template__container .template__controllers img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.template__container .template__controllers .send__message__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 94%;
+  height: 80%;
+}
+
+.template__container .template__controllers .send__message__wrapper button {
+  display: none;
+}
+
+.template__container .template__controllers .send__message__wrapper input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  height: 35px;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+
+.chatbox {
+  width: 100%;
+  height: calc(100% - 50px);
+  padding: 10px 15px;
+  padding-bottom: 60px;
+  position: relative;
+  overflow-y: auto;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.chatbox .message {
+  width: 100%;
+  margin: 4px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chatbox .message .delIcon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.chatbox .message .text {
+  position: relative;
+  color: black;
+  padding: 5px 10px;
+  padding-bottom: 18px;
+  border-radius: 05px;
+  min-width: 350px;
+  max-width: 65%;
+  background-color: #dcf8c6;
+}
+
+.chatbox .message p {
+  position: relative;
+  background-color: #dcf8c6;
+  color: black;
+  padding: 5px 12px;
+  padding-bottom: 18px;
+  border-radius: 5px;
+  min-width: 200px;
+  max-width: 65%;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.chatbox .message .timestamps {
+  position: absolute;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  font-size: 11px;
+  width: 200px;
+  color: gray;
+  font-weight: bold;
+  padding: 2px 5px;
+}
+
+.chatbox .message .timestamps .day {
+  background: none;
+}
+
+.chatbox .message .timestamps .date {
+  background: none;
+  font-size: 11px;
+  color: gray;
+}
+
+.chatbox .seller p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -8px;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent);
+}
+
+.chatbox .client p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(225deg, #fff 0%, #fff 50%, transparent 50%, transparent);
+}
+
+.chatbox .seller img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -8px;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent);
+}
+
+.chatbox .client img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(225deg, #fff 0%, #fff 50%, transparent 50%, transparent);
+}
+
+.chatbox .client {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.chatbox .client p {
+  background-color: #fff;
+}
+
+.chatbox .client img {
+  background-color: #fff;
+}
+
+.chatbox .seller {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.emoji__picker_ {
+  position: absolute;
+  bottom: 70px;
+  left: 0px;
+}
+/*# sourceMappingURL=salesbot.css.map */
